@@ -55,7 +55,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     # Ignore messages sent by the bot
-    if message.author == bot.user or message.mention_everyone:
+    if message.author == bot.user:
         return
     # Check if the bot is mentioned or the message is a DM
     if bot.user.mentioned_in(message) or isinstance(message.channel, discord.DMChannel):
